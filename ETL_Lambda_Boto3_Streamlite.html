@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entregable 3 - Análisis Netflix</title>
+    <style>
+        /* ===== Base ===== */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #0e1117;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        /* ===== Header ===== */
+        header {
+            background-color: #12141c;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            border-bottom: 3px solid #4fd1c5;
+        }
+
+        header h1 {
+            margin: 0 0 0.5rem 0;
+            color: #ffffff;
+            font-size: 2rem;
+        }
+
+        header p {
+            margin: 0;
+            color: #c7cbd1;
+            font-size: 1.1rem;
+        }
+
+        /* ===== Main ===== */
+        main {
+            display: flex;
+            justify-content: center;
+            padding: 2.5rem 1.5rem;
+        }
+
+        /* ===== Carrusel ===== */
+        .carrusel {
+            position: relative;
+            width: 100%;
+            max-width: 850px;
+            overflow: hidden;
+            border-radius: 14px;
+            border: 1px solid #2c2f38;
+            background-color: #1a1c23;
+        }
+
+        .carrusel-track {
+            display: flex;
+            transition: transform 0.4s ease;
+        }
+
+        .slide {
+            min-width: 100%;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .slide img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: contain;
+            border-radius: 10px;
+            background-color: #0e1117;
+        }
+
+        .titulo-slide {
+            margin-top: 1rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        /* ===== Botones prev/next ===== */
+        .btn-carrusel {
+            position: absolute;
+            top: 45%;
+            transform: translateY(-50%);
+            background-color: rgba(26, 28, 35, 0.8);
+            color: #ffffff;
+            border: 1px solid #2c2f38;
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: border-color 0.2s ease, background-color 0.2s ease;
+        }
+
+        .btn-carrusel:hover {
+            border-color: #4fd1c5;
+            background-color: #12141c;
+        }
+
+        .btn-carrusel.prev {
+            left: 15px;
+        }
+
+        .btn-carrusel.next {
+            right: 15px;
+        }
+
+        /* ===== Puntos indicadores ===== */
+        .puntos {
+            display: flex;
+            justify-content: center;
+            gap: 0.6rem;
+            padding: 1rem 0 1.5rem 0;
+        }
+
+        .punto {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #2c2f38;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .punto.activo {
+            background-color: #4fd1c5;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: #9aa0a6;
+            font-size: 0.85rem;
+            border-top: 1px solid #2c2f38;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Entregable 3 · Análisis de Datos Netflix</h1>
+        <p>Recorrido visual del proceso: portada, auditoría, limpieza, variables nuevas y exploración.</p>
+    </header>
+
+    <main>
+        <div class="carrusel">
+            <div class="carrusel-track">
+                <div class="slide">
+                    <img src="imagenes/entrega_5/1.png" alt="Bucket S3 Antes">
+                    <p class="titulo-slide">Bucket S3 antes de la Ejecucion de Lambda</p>
+                </div>
+                <div class="slide">
+                    <img src="imagenes/entrega_5/2.png" alt="Streamlite antes de invocar Lambda">
+                    <p class="titulo-slide">Pagina de Streamlite antes de precionar el boton que invocar la Lambda</p>
+                </div>
+                <div class="slide">
+                    <img src="imagenes/entrega_5/3.png" alt="Invocación de Lambda - Vista archivo original">
+                    <p class="titulo-slide">Vista de archivo original y sus datos faltantes</p>
+                </div>
+                <div class="slide">
+                    <img src="imagenes/entrega_5/4.png" alt="Lambda Ejecutada y Lectura de nuevo archivo generado">
+                    <p class="titulo-slide">Respuesta de Lambda y Vista de archivo limpio generado por lambda y sus datos faltantes</p>
+                </div>
+                <div class="slide">
+                    <img src="imagenes/entrega_5/5.png" alt="Archivo Titanic_limpio.csv generado en S3">
+                    <p class="titulo-slide">Bucket en S3 con el nuevo archivo generado por Lambda</p>
+                </div>
+                <div class="slide">
+                    <img src="imagenes/entrega_5/6.png" alt="Código función lambda">
+                    <p class="titulo-slide">Se muestra el código de la funcion lambda principal.</p>
+                </div>
+                <div class="slide">
+                    <img src="imagenes/entrega_5/7.png" alt="Código de función de limpieza">
+                    <p class="titulo-slide">Se muestra código de la funcion que limpia los datos del Dataframe.</p>
+                </div>
+                <div class="slide">
+                    <img src="imagenes/entrega_5/8.png" alt="Código de función de manejo de S3">
+                    <p class="titulo-slide">Función que se encarga de manipular las operaciones de lectura y escritura en S3 ademas de hacer validaciones..</p>
+                </div>
+              
+                
+            </div>
+
+            <button class="btn-carrusel prev" onclick="moverSlide(-1)">&#10094;</button>
+            <button class="btn-carrusel next" onclick="moverSlide(1)">&#10095;</button>
+
+            <div class="puntos">
+                <span class="punto" onclick="irASlide(0)"></span>
+                <span class="punto" onclick="irASlide(1)"></span>
+                <span class="punto" onclick="irASlide(2)"></span>
+                <span class="punto" onclick="irASlide(3)"></span>
+                <span class="punto" onclick="irASlide(4)"></span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Oscar Mayorga</p>
+    </footer>
+
+    <script>
+        let indiceActual = 0;
+        const track = document.querySelector('.carrusel-track');
+        const slides = document.querySelectorAll('.slide');
+        const puntos = document.querySelectorAll('.punto');
+        const totalSlides = slides.length;
+
+        function actualizarCarrusel() {
+            track.style.transform = `translateX(${-indiceActual * 100}%)`;
+            puntos.forEach((p, i) => p.classList.toggle('activo', i === indiceActual));
+        }
+
+        function moverSlide(direccion) {
+            indiceActual = (indiceActual + direccion + totalSlides) % totalSlides;
+            actualizarCarrusel();
+        }
+
+        function irASlide(i) {
+            indiceActual = i;
+            actualizarCarrusel();
+        }
+
+        actualizarCarrusel();
+    </script>
+</body>
+</html>
