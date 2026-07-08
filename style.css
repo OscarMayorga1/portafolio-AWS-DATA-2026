@@ -1,0 +1,133 @@
+/* ===== Base ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* ===== Header ===== */
+header {
+    background-color: #1a1a2e;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    border-bottom: 3px solid #4fd1c5;
+}
+
+header h1 {
+    margin: 0 0 0.5rem 0;
+    color: #ffffff;
+    font-size: 1.8rem;
+}
+
+header p {
+    margin: 0;
+    color: #a0a0b0;
+}
+
+/* ===== Main ===== */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+section#proyectos h2 {
+    color: #4fd1c5;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== Tarjetas de proyectos ===== */
+#proyectos > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.2rem;
+}
+
+#proyectos > ul > li {
+    background-color: #1e1e2f;
+    border: 1px solid #2c2c3e;
+    border-radius: 10px;
+    padding: 1.2rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#proyectos > ul > li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(79, 209, 197, 0.15);
+    border-color: #4fd1c5;
+}
+
+#proyectos > ul > li a {
+    display: block;
+    color: #4fd1c5;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+#proyectos > ul > li a:hover {
+    text-decoration: underline;
+}
+
+#proyectos > ul > li p {
+    margin: 0;
+    color: #b0b0c0;
+    font-size: 0.9rem;
+}
+
+/* ===== Cuadro de cursos ===== */
+#cursos {
+    margin-top: 2.5rem;
+}
+
+#cursos h3 {
+    color: #4fd1c5;
+    margin-bottom: 1rem;
+}
+
+#cursos ul {
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+    background-color: #1a1a2e;
+    border: 1px solid #2c2c3e;
+    border-radius: 10px;
+}
+
+#cursos ul li {
+    padding: 0.6rem 0.5rem;
+    border-bottom: 1px solid #2c2c3e;
+}
+
+#cursos ul li:last-child {
+    border-bottom: none;
+}
+
+#cursos ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+#cursos ul li a:hover {
+    color: #4fd1c5;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #808090;
+    font-size: 0.85rem;
+    border-top: 1px solid #2c2c3e;
+}
