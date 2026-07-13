@@ -22,8 +22,7 @@ Colección de prácticas y proyectos desarrollados durante el curso **AWS DATA 2
 | [Entregable 3.1 — Netflix con Streamlit](Analisis_Datos_Netflix_imagenes.html) | Capturas de funcionamiento de la app interactiva construida con Streamlit. | Streamlit |
 | [Entregable 4 — Boto3 + Titanic](Boto3_Titanic.html) | Carga de un CSV desde S3 usando Boto3; carrusel de imágenes del proceso. | Boto3, S3 |
 | [Entregable 5 — ETL con Lambda](ETL_Lambda_Boto3_Streamlite.html) | Función Lambda que descarga un CSV desde S3, aplica limpieza y guarda el resultado; se invoca desde una app de Streamlit. | AWS Lambda, Boto3, S3, Streamlit |
-| [Proyecto Integrador — Taxis de Nueva York](Analisis_Datos_Netflix.html) | Pipeline ETL de datos con PySpark
-Pipeline ETL completo: extracción de datos desde una fuente original, ingesta en Amazon S3, limpieza y generación de KPIs con PySpark, y consumo final de los resultados en una app de Streamlit con visualizaciones interactivas. | Python, PySpark, Amazon S3, Streamlit |
+| [Proyecto Integrador — Taxis de Nueva York](Analisis_Datos_Netflix.html) | Pipeline ETL de datos con PySpark Pipeline ETL completo: extracción de datos desde una fuente original, ingesta en Amazon S3, limpieza y generación de KPIs con PySpark, y consumo final de los resultados en una app de Streamlit con visualizaciones interactivas. | Python, PySpark, Amazon S3, Streamlit |
 
 
 ---
